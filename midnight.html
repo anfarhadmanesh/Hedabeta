@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>یادداشت‌های نیمه‌شب | نجواهای امید و خودشناسی</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Vazirmatn:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="midnight.css">
+</head>
+<body>
+
+  <!-- بخش ورودی تمام‌صفحه با تصویر midnight.JPG -->
+  <section class="mn-hero">
+    <div class="mn-hero-bg"></div>
+    <div class="mn-hero-gradient"></div>
+
+    <!-- نوار ناوبری بالای بنر -->
+    <header class="mn-topbar">
+      <nav class="mn-nav-links" aria-label="ناوبری یادداشت‌های نیمه‌شب">
+        <a href="#whispers">نجواهای شبانه</a>
+        <a href="#solitude">خلوت و خودشناسی</a>
+        <a href="index.html">آرشیو کل وبلاگ</a>
+        <a href="intro.html">درگاه چهارگانه</a>
+      </nav>
+      <div class="mn-top-tools">
+        <button class="mn-ambient-top-btn" onclick="toggleNightMusic(this, 'ambient-main')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          <span>پخش نوای شب</span>
+        </button>
+        <audio id="ambient-main" src="night-piano.mp3" loop></audio>
+      </div>
+    </header>
+
+    <!-- تیتر مرکزی سینمایی -->
+    <div class="mn-hero-center">
+      <span class="mn-latin-kicker">MIDNIGHT CHRONICLES &amp; POETRY</span>
+      <h1 class="mn-display-title">یادداشت‌های نیمه‌شب</h1>
+      <p class="mn-display-subtitle">
+        نجواهای پرنور امید در شب تاریک خودشناسی | جایی برای شعر، تأمل و سکوت
+      </p>
+    </div>
+
+    <!-- نوار فیلتر افقی شیشه‌ای پایین بنر (مشابه هداگرافی) -->
+    <div class="mn-filter-strip">
+      <button class="mn-filter-btn active" onclick="filterMidnight('all', this)">همه نوشته‌ها</button>
+      <span class="sep">|</span>
+      <button class="mn-filter-btn" onclick="filterMidnight('poetry', this)">شعر و تماشا</button>
+      <span class="sep">|</span>
+      <button class="mn-filter-btn" onclick="filterMidnight('self', this)">خودشناسی و خلوت</button>
+      <span class="sep">|</span>
+      <button class="mn-filter-btn" onclick="filterMidnight('hope', this)">امید و سحرگاه</button>
+      <a href="#whispers" class="mn-Action-pill">ورود به متن‌ها ↓</a>
+    </div>
+  </section>
+
+  <!-- بدنه اصلی: چیدمان ادیتوریال با فضای متن گسترده و قاب عکس کوچک -->
+  <main class="mn-main" id="whispers">
+
+    <!-- یادداشت ۱ (شعر و تماشا) -->
+    <article class="mn-editorial-row" data-mood="poetry">
+      
+      <!-- ستون کوچک تصویر با قاب خطی آفست -->
+      <div class="mn-visual-col">
+        <div class="mn-framed-thumb frame-top-left">
+          <img src="img/midnight.JPG" alt="غروب و تماشا" onerror="this.src='img/Hedagraphy.JPG'">
+        </div>
+        <div class="mn-thumb-caption">
+          <span>۲۷ دی ۱۴۰۴ • نیمه‌شب</span>
+        </div>
+      </div>
+
+      <!-- ستون گسترده متن و شعر -->
+      <div class="mn-text-col">
+        <div class="mn-post-header">
+          <span class="mn-featured-box">POETRY &amp; REFLECTION</span>
+          <button class="mn-inline-audio" onclick="toggleNightMusic(this, 'ambient-main')">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            <span>نوای پس‌زمینه</span>
+          </button>
+        </div>
+
+        <h2 class="mn-editorial-heading">
+          <a href="post.html?id=1">غروب را نتوان، مرگ آفتاب انگاشت</a>
+        </h2>
+
+        <div class="mn-subtitle-line">
+          <h3>در باد روان شدم؛ چه شوری برای تماشا داشتم</h3>
+          <span class="line-decor"></span>
+        </div>
+
+        <!-- باکس شعر با فضای تنفس بالا -->
+        <blockquote class="mn-verse-box">
+          «در باد روان شدم.<br>
+          چه شوری برای تماشا داشتم.<br>
+          اگر یک روز طلوع و غروب آفتاب را نمی‌دیدم گناهکار بودم.»
+          <footer>— سهراب سپهری</footer>
+        </blockquote>
+
+        <p class="mn-story-text">
+          اولین روز هفته بود، شنبه بیست و هفتم دی‌ماه. گاهی در میان خستگیِ کشیک‌ها و شتاب بی‌امان روزگار، ایستادن در برابر یک غروبِ آرام به ما یادآوری می‌کند که تاریکی پایانِ راه نیست؛ بلکه مکثی است برای دیده شدنِ ستاره‌ها و مقدمه‌ای برای طلوعی دوباره در سحرگاه.
+        </p>
+
+        <div class="mn-post-footer">
+          <a href="post.html?id=1" class="mn-white-btn">مطالعه کامل دل‌نوشته ←</a>
+        </div>
+      </div>
+
+    </article>
+
+    <!-- یادداشت ۲ (چیدمان معکوس: متن در راست، قاب عکس کوچک در چپ) -->
+    <article class="mn-editorial-row reverse-row" id="solitude" data-mood="self">
+      
+      <div class="mn-text-col">
+        <div class="mn-post-header">
+          <span class="mn-featured-box">SELF DISCOVERY</span>
+          <time class="mn-date-label">۱۱ مرداد ۱۴۰۵ • ساعت ۰۲:۱۵ بامداد</time>
+        </div>
+
+        <h2 class="mn-editorial-heading">
+          <a href="post.html?id=1">اولِ نوشتن؛ نوری بر زخم‌های تاریکِ آدم‌ها</a>
+        </h2>
+
+        <div class="mn-subtitle-line">
+          <span class="line-decor"></span>
+          <h3>زیستن با نقص‌ها در سکوتِ صادقانه شب</h3>
+        </div>
+
+        <blockquote class="mn-verse-box">
+          «می‌توانی نوشتن را آغاز کنی، حتی با وجود فاصله‌ها و ناهمخوانی‌ها.<br>
+          بیا و زندگی را با نقص‌هایت زندگی کن؛<br>
+          کلمات جاری می‌شوند وقتی قضاوت‌ها به خاموشی بگرایند.»
+        </blockquote>
+
+        <p class="mn-story-text">
+          در خلوتِ نیمه‌شب، وقتی هیاهوی شهر و نقاب‌های روزمره کنار می‌روند، نوشتن تبدیل به آیینه‌ای می‌شود برای دیدنِ بی‌واسطه‌ی خودمان. اینجا از تجربه‌هایی می‌نویسم که شاید تلخ باشند و شاید شیرین؛ در تلاش برای رسیدن به خودشناسی و روشن کردن چراغی کوچک در دل تاریکی.
+        </p>
+
+        <div class="mn-post-footer">
+          <a href="post.html?id=1" class="mn-white-btn">مطالعه کامل دل‌نوشته ←</a>
+        </div>
+      </div>
+
+      <div class="mn-visual-col">
+        <div class="mn-framed-thumb frame-bottom-right">
+          <img src="img/Hedabeta1.jpg" alt="نوری بر زخم‌ها" onerror="this.src='img/midnight.JPG'">
+        </div>
+        <div class="mn-thumb-caption">
+          <span>تأملات بامداد</span>
+        </div>
+      </div>
+
+    </article>
+
+    <!-- یادداشت ۳ (امید و سحرگاه) -->
+    <article class="mn-editorial-row" data-mood="hope">
+      
+      <div class="mn-visual-col">
+        <div class="mn-framed-thumb frame-top-left">
+          <img src="img/lifehx.jpg" alt="امید در شب تاریک" onerror="this.src='img/midnight.JPG'">
+        </div>
+        <div class="mn-thumb-caption">
+          <span>اسفند ۱۴۰۴ • یادداشت شبانه</span>
+        </div>
+      </div>
+
+      <div class="mn-text-col">
+        <div class="mn-post-header">
+          <span class="mn-featured-box">HOPE IN DARKNESS</span>
+        </div>
+
+        <h2 class="mn-editorial-heading">
+          <a href="post.html?id=2">باد تند است و چراغم ابتری... اما روشن</a>
+        </h2>
+
+        <div class="mn-subtitle-line">
+          <h3>نجواهای امید در روزهای پرالتهاب</h3>
+          <span class="line-decor"></span>
+        </div>
+
+        <p class="mn-story-text">
+          اسفندماه سال ۱۴۰۴ ماه متفاوتی برایم بود؛ شاید هم متفاوت‌ترین ماه برای همه ما. در روزهایی که ابهام و التهاب سایه می‌اندازد، نوشتن از امید نه یک خوش‌بینی ساده‌لوحانه، بلکه یک انتخاب آگاهانه برای زنده نگه داشتنِ انسانیت و معنا در دل طوفان است.
+        </p>
+
+        <div class="mn-post-footer">
+          <a href="post.html?id=2" class="mn-white-btn">مطالعه کامل دل‌نوشته ←</a>
+        </div>
+      </div>
+
+    </article>
+
+  </main>
+
+  <!-- فوتر کادربندی‌شده مطابق سبک هداگرافی -->
+  <footer class="mn-footer-wrapper">
+    <div class="mn-footer-box">
+      <div class="mn-footer-side">
+        <span>whispers &amp; words by @drsmrhd</span>
+      </div>
+
+      <a href="intro.html" class="mn-footer-pill">MIDNIGHT &bull; بازگشت به درگاه چهارگانه</a>
+
+      <div class="mn-footer-side mn-footer-socials">
+        <span>© ۱۴۰۵ سید محمدرضا هدایتی دِرَو</span>
+        <a href="https://t.me/Macteb" target="_blank" rel="noopener noreferrer" title="تلگرام">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.19-.08-.05-.19-.02-.27 0-.11.03-1.92 1.23-5.44 3.6-.51.35-.98.52-1.39.51-.46-.01-1.35-.26-2.01-.48-.81-.27-1.46-.42-1.4-.88.03-.24.37-.48 1.03-.74 4.04-1.76 6.74-2.92 8.09-3.48 3.85-1.6 4.64-1.88 5.17-1.89.11 0 .37.03.54.17.14.12.18.28.2.43.01.07.02.16.02.26z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/drsmrhd/" target="_blank" rel="noopener noreferrer" title="لینکدین">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.16-3.8c-1.1 0-1.8.5-2.2 1.1v-1h-2.5v9h2.5v-4.9c0-1.2.3-2.4 1.7-2.4 1.4 0 1.4 1.4 1.4 2.5v4.9h2.5M6.5 8.1c.8 0 1.5-.7 1.5-1.5S7.3 5 6.5 5 5 5.7 5 6.5 5.7 8.1 6.5 8.1m-1.3 10.4h2.5v-9H5.2v9z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // فیلتر دسته‌بندی یادداشت‌های نیمه‌شب
+    function filterMidnight(mood, btn) {
+      document.querySelectorAll('.mn-filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.mn-editorial-row').forEach(row => {
+        row.style.display = (mood === 'all' || row.dataset.mood === mood) ? 'grid' : 'none';
+      });
+    }
+
+    // پخش‌کننده نوای شبانه با پشتیبان صوتی داخلی
+    let ambientCtx = null;
+    let ambientOscs = [];
+
+    function stopSynth() {
+      ambientOscs.forEach(o => { try { o.stop(); } catch (e) {} });
+      ambientOscs = [];
+      if (ambientCtx) { ambientCtx.close(); ambientCtx = null; }
+    }
+
+    function startSynth() {
+      const AudioContext = window.AudioContext || window.webkitAudioContext;
+      ambientCtx = new AudioContext();
+      [220, 261.63, 329.63, 392.00].forEach(freq => {
+        const osc = ambientCtx.createOscillator();
+        const gain = ambientCtx.createGain();
+        osc.type = 'sine';
+        osc.frequency.value = freq;
+        gain.gain.value = 0.02;
+        osc.connect(gain);
+        gain.connect(ambientCtx.destination);
+        osc.start();
+        ambientOscs.push(osc);
+      });
+    }
+
+    function toggleNightMusic(btn, audioId) {
+      const audio = document.getElementById(audioId);
+      const isPlaying = btn.classList.contains('playing');
+
+      document.querySelectorAll('.mn-ambient-top-btn, .mn-inline-audio').forEach(b => {
+        b.classList.remove('playing');
+        const p = b.querySelector('path');
+        if (p) p.setAttribute('d', 'M8 5v14l11-7z');
+      });
+      stopSynth();
+      if (audio) audio.pause();
+
+      if (!isPlaying) {
+        btn.classList.add('playing');
+        const p = btn.querySelector('path');
+        if (p) p.setAttribute('d', 'M6 19h4V5H6v14zm8-14v14h4V5h-4z');
+        if (audio) {
+          audio.play().catch(() => startSynth());
+        } else {
+          startSynth();
+        }
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,589 @@
+:root {
+  --db-blue: #005C9E;
+  --db-blue-dark: #004477;
+  --db-blue-light: #E0F2FE;
+  --db-amber: #F59E0B;
+  --db-amber-light: #FEF3C7;
+  --hb-bg: #F8FAFC;
+  --hb-surface: #FFFFFF;
+  --hb-text: #0F172A;
+  --hb-muted: #475569;
+  --hb-border: #E2E8F0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Vazirmatn', 'Inter', Tahoma, sans-serif;
+  background-color: var(--hb-bg);
+  color: var(--hb-text);
+  line-height: 1.85;
+}
+
+.hb-container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* --- هدر --- */
+.hb-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--hb-border);
+}
+
+.hb-header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.hb-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+/* حلقه آبی نماد جهانی دیابت */
+.diabetes-circle {
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  border: 5px solid var(--db-blue);
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.hb-logo {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--db-blue);
+  letter-spacing: -0.5px;
+}
+
+.hb-logo span {
+  color: var(--db-amber);
+}
+
+.hb-tagline {
+  font-size: 0.78rem;
+  color: var(--hb-muted);
+}
+
+.hb-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.hb-nav-link {
+  padding: 0.4rem 0.75rem;
+  border-radius: 8px;
+  color: var(--hb-text);
+  transition: all 0.2s;
+}
+
+.hb-nav-link:hover,
+.hb-nav-link.active {
+  background-color: var(--db-blue-light);
+  color: var(--db-blue);
+}
+
+/* --- بخش هرو --- */
+.hb-hero {
+  background: linear-gradient(135deg, #005C9E 0%, #003963 100%);
+  color: #ffffff;
+  padding: 4rem 0;
+}
+
+.hb-hero-grid {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.hb-pill {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hb-hero-content h1 {
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  font-weight: 900;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.hb-hero-content p {
+  font-size: 1rem;
+  color: #E0F2FE;
+  margin-bottom: 1.75rem;
+}
+
+.hb-hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  background-color: var(--db-amber);
+  color: #0F172A;
+  font-weight: 800;
+  padding: 0.7rem 1.5rem;
+  border-radius: 10px;
+  transition: transform 0.2s;
+}
+
+.btn-outline {
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  color: #ffffff;
+  font-weight: 700;
+  padding: 0.7rem 1.5rem;
+  border-radius: 10px;
+}
+
+.btn-primary:hover,
+.btn-outline:hover {
+  transform: translateY(-2px);
+}
+
+.hb-hero-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 18px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.hb-avatar-large {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--db-amber);
+  margin-bottom: 0.85rem;
+}
+
+.hb-hero-card-info h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.25rem;
+}
+
+.hb-hero-card-info p {
+  font-size: 0.82rem;
+  color: #BAE6FD;
+}
+
+/* --- کارت‌های آمار (Stats) --- */
+.hb-stats-section {
+  margin-top: -2rem;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 10;
+}
+
+.hb-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.hb-stat-box {
+  background: var(--hb-surface);
+  border-radius: 14px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+  border-top: 4px solid var(--db-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hb-stat-box.amber-accent {
+  border-top-color: var(--db-amber);
+}
+
+.stat-icon {
+  font-size: 1.6rem;
+  margin-bottom: 0.4rem;
+}
+
+.stat-val {
+  font-size: 1.65rem;
+  font-weight: 900;
+  color: var(--hb-text);
+}
+
+.stat-label {
+  font-size: 0.82rem;
+  color: var(--hb-muted);
+}
+
+/* --- بخش اصلی دو ستونی --- */
+.hb-main-layout {
+  display: grid;
+  grid-template-columns: 2.3fr 1fr;
+  gap: 2.25rem;
+  margin-bottom: 4rem;
+  align-items: start;
+}
+
+.hb-filter-bar {
+  background: var(--hb-surface);
+  border: 1px solid var(--hb-border);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hb-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.hb-tab {
+  background: var(--hb-bg);
+  border: 1px solid var(--hb-border);
+  padding: 0.45rem 0.9rem;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--hb-muted);
+}
+
+.hb-tab.active {
+  background: var(--db-blue);
+  color: #ffffff;
+  border-color: var(--db-blue);
+}
+
+.hb-search-input {
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--hb-border);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.85rem;
+  min-width: 220px;
+}
+
+/* --- کارت‌های پست هدا بتا --- */
+.hb-posts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.hb-post-card {
+  background: var(--hb-surface);
+  border: 1px solid var(--hb-border);
+  border-radius: 14px;
+  padding: 1.35rem;
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 1.35rem;
+  align-items: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.hb-post-card:hover {
+  box-shadow: 0 12px 24px rgba(0, 92, 158, 0.08);
+  transform: translateY(-2px);
+}
+
+.hb-post-thumb {
+  width: 140px;
+  height: 140px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.hb-post-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.8rem;
+  color: var(--hb-muted);
+  margin-bottom: 0.5rem;
+}
+
+.hb-badge {
+  padding: 2px 10px;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+.badge-blue {
+  background: var(--db-blue-light);
+  color: var(--db-blue);
+}
+
+.badge-amber {
+  background: var(--db-amber-light);
+  color: #B45309;
+}
+
+.hb-post-body h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--hb-text);
+}
+
+.hb-post-body h2 a:hover {
+  color: var(--db-blue);
+}
+
+.hb-post-body p {
+  font-size: 0.9rem;
+  color: var(--hb-muted);
+  margin-bottom: 0.85rem;
+}
+
+.hb-read-more {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: var(--db-blue);
+}
+
+/* --- بخش انگلیسی YLD --- */
+.yld-hub {
+  margin-top: 2.5rem;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F0F9FF 100%);
+  border: 2px solid #BAE6FD;
+  border-radius: 16px;
+  padding: 2rem;
+  font-family: 'Inter', 'Vazirmatn', sans-serif;
+}
+
+.yld-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.yld-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--db-blue);
+  letter-spacing: 1px;
+}
+
+.yld-header h2 {
+  font-size: 1.5rem;
+  color: var(--hb-text);
+}
+
+.yld-badge {
+  background: var(--db-blue);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+.yld-intro {
+  font-size: 0.95rem;
+  color: var(--hb-muted);
+  margin-bottom: 1.5rem;
+}
+
+.yld-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.yld-project-card {
+  background: #ffffff;
+  border: 1px solid var(--hb-border);
+  border-radius: 12px;
+  padding: 1.35rem;
+}
+
+.project-status {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #B45309;
+  background: var(--db-amber-light);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.yld-project-card h3 {
+  font-size: 1.1rem;
+  margin: 0.6rem 0;
+}
+
+.yld-project-card p {
+  font-size: 0.85rem;
+  color: var(--hb-muted);
+  margin-bottom: 1rem;
+}
+
+.yld-link {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--db-blue);
+}
+
+/* --- سایدبار مسیر دیابت --- */
+.hb-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.hb-widget {
+  background: var(--hb-surface);
+  border: 1px solid var(--hb-border);
+  border-radius: 14px;
+  padding: 1.5rem;
+}
+
+.hb-widget-title {
+  font-size: 1.05rem;
+  color: var(--db-blue);
+  border-bottom: 2px solid var(--hb-bg);
+  padding-bottom: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.hb-journey-list {
+  list-style: none;
+  border-right: 2px solid var(--db-blue);
+  padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.hb-journey-list li {
+  position: relative;
+}
+
+.hb-journey-list li::before {
+  content: '';
+  position: absolute;
+  right: -1.38rem;
+  top: 0.45rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--db-amber);
+}
+
+.hb-journey-list strong {
+  font-size: 0.9rem;
+  display: block;
+}
+
+.hb-journey-list p {
+  font-size: 0.8rem;
+  color: var(--hb-muted);
+}
+
+.hb-cross-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.hb-cross-links a {
+  padding: 0.6rem 0.85rem;
+  background: var(--hb-bg);
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+}
+
+.hb-cross-links a:hover {
+  background: var(--db-blue-light);
+  color: var(--db-blue);
+}
+
+/* --- فوتر --- */
+.hb-footer {
+  background: var(--hb-surface);
+  border-top: 1px solid var(--hb-border);
+  padding: 1.5rem 0;
+  font-size: 0.85rem;
+  color: var(--hb-muted);
+}
+
+.hb-footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.hb-social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.hb-social-icons a:hover {
+  color: var(--db-blue);
+}
+
+@media (max-width: 900px) {
+  .hb-hero-grid,
+  .hb-main-layout,
+  .yld-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .hb-stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .hb-post-card {
+    grid-template-columns: 1fr;
+  }
+  .hb-post-thumb {
+    width: 100%;
+    height: 190px;
+  }
+}

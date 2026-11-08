@@ -1,0 +1,451 @@
+:root {
+  --hg-dark: #0B0D10;
+  --hg-surface: #14181F;
+  --hg-white: #FFFFFF;
+  --hg-muted: #A0AAB8;
+  --hg-line: rgba(255, 255, 255, 0.35);
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-vazir: 'Vazirmatn', Tahoma, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--hg-dark);
+  color: var(--hg-white);
+  font-family: var(--font-vazir);
+  line-height: 1.85;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* --- بخش هرو سینمایی --- */
+.hg-hero {
+  position: relative;
+  height: 95vh;
+  min-height: 620px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 6%;
+}
+
+.hg-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('img/Hedagraphy.JPG');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.75) contrast(1.05);
+  z-index: 0;
+}
+
+.hg-hero-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(11, 13, 16, 0.45) 0%,
+    rgba(11, 13, 16, 0.25) 45%,
+    rgba(11, 13, 16, 0.92) 88%,
+    #0B0D10 100%
+  );
+  z-index: 1;
+}
+
+/* منوی بالای هرو */
+.hg-topbar {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.hg-nav-links {
+  display: flex;
+  gap: 2.2rem;
+}
+
+.hg-nav-links a:hover {
+  color: #ffffff;
+}
+
+.hg-top-tools {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  font-size: 0.82rem;
+}
+
+/* تیتر وسط هرو */
+.hg-hero-center {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  margin: auto 0;
+}
+
+.hg-display-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 5.5vw, 4.4rem);
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  line-height: 1.18;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+.hg-display-subtitle {
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+/* نوار فیلتر افقی شیشه‌ای پایین هرو */
+.hg-filter-strip {
+  position: relative;
+  z-index: 3;
+  max-width: 860px;
+  width: 100%;
+  margin: 0 auto 1rem auto;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  padding: 0.65rem 0.8rem 0.65rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.hg-filter-item {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.85);
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.hg-filter-item span {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.hg-search-btn {
+  background: #ffffff;
+  color: #0B0D10;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.55rem 1.75rem;
+  transition: background 0.2s;
+}
+
+.hg-search-btn:hover {
+  background: #e2e8f0;
+}
+
+/* --- بخش‌های ادیتوریال (Editorial Split Sections) --- */
+.hg-main {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+.hg-editorial-row {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 4.5rem;
+  align-items: center;
+  margin-bottom: 7rem;
+}
+
+.hg-editorial-row.reverse-row {
+  grid-template-columns: 1.15fr 1fr;
+}
+
+/* قاب تصویر با کادر خطی سفید آفست در پشت آن (مطابق عکس مرجع) */
+.hg-framed-photo {
+  position: relative;
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+.hg-framed-photo img {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.65);
+  transition: opacity 0.25s ease;
+}
+
+/* کادر خطی سفید بیرون‌زده از بالا-چپ */
+.frame-top-left::before {
+  content: '';
+  position: absolute;
+  top: -22px;
+  left: -22px;
+  width: 75%;
+  height: 85%;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  z-index: 1;
+}
+
+/* کادر خطی سفید بیرون‌زده از پایین-راست */
+.frame-bottom-right::before {
+  content: '';
+  position: absolute;
+  bottom: -22px;
+  right: -22px;
+  width: 75%;
+  height: 85%;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  z-index: 1;
+}
+
+/* دکمه‌های دایره‌ای اسلایدر و نقطه‌ها */
+.hg-slider-controls {
+  max-width: 360px;
+  margin: 1.5rem auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hg-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.hg-dots .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.hg-dots .dot.active {
+  background: #ffffff;
+}
+
+.hg-arrows {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.circle-arrow {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.circle-arrow.active-arrow,
+.circle-arrow:hover {
+  border-color: #ffffff;
+  color: #ffffff;
+  transform: scale(1.06);
+}
+
+/* ستون متون داستانی */
+.hg-featured-box {
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 4px 16px;
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  margin-bottom: 1.25rem;
+}
+
+.hg-editorial-heading {
+  font-family: var(--font-serif), var(--font-vazir);
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 600;
+  line-height: 1.35;
+  margin-bottom: 1.25rem;
+}
+
+.hg-subtitle-line {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.hg-subtitle-line h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.line-decor {
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.45);
+  min-width: 60px;
+}
+
+.hg-story-text {
+  font-size: 0.9rem;
+  color: var(--hg-muted);
+  line-height: 2;
+  margin-bottom: 1.75rem;
+}
+
+.hg-white-btn {
+  display: inline-block;
+  background: #ffffff;
+  color: #0B0D10;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.65rem 1.8rem;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.hg-white-btn:hover {
+  background: #e2e8f0;
+  transform: translateY(-2px);
+}
+
+/* --- بخش گالری تاریک‌خانه --- */
+.hg-gallery-section {
+  margin-top: 4rem;
+}
+
+.hg-gallery-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.hg-gallery-header h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.hg-masonry-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.hg-gallery-item {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  height: 320px;
+}
+
+.hg-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.hg-gallery-item:hover img {
+  transform: scale(1.07);
+}
+
+.hg-exif-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(11, 13, 16, 0.9) 0%, transparent 60%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.25rem;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.hg-gallery-item:hover .hg-exif-overlay {
+  opacity: 1;
+}
+
+.hg-exif-overlay strong {
+  font-size: 0.95rem;
+}
+
+.hg-exif-overlay span {
+  font-size: 0.75rem;
+  color: var(--hg-muted);
+  direction: ltr;
+}
+
+/* --- فوتر کادربندی‌شده مطابق عکس مرجع --- */
+.hg-footer-wrapper {
+  padding: 2rem 6% 3rem 6%;
+}
+
+.hg-footer-box {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 0.9rem 1.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.hg-footer-pill {
+  background: #ffffff;
+  color: #0B0D10;
+  font-weight: 700;
+  font-size: 0.78rem;
+  padding: 0.45rem 1.6rem;
+  border-radius: 999px;
+  letter-spacing: 0.05em;
+}
+
+.hg-footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.hg-footer-socials a:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 860px) {
+  .hg-editorial-row,
+  .hg-editorial-row.reverse-row,
+  .hg-masonry-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .hg-footer-box {
+    flex-direction: column;
+    text-align: center;
+  }
+}

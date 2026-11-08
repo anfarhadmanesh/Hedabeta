@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;900&display=swap');
+
+@font-face {
+  font-family: 'VazirmatnLocal';
+  src: url('fonts/Vazirmatn-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body.intro-body {
+  font-family: "Vazirmatn", "VazirmatnLocal", Tahoma, sans-serif;
+  min-height: 100vh;
+  background-color: #0b1120;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 24px;
+}
+
+.landing-container {
+  display: flex;
+  width: 94vw;
+  max-width: 1600px;
+  height: 82vh;
+  gap: 16px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 28px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.channel-box {
+  flex: 1;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  text-decoration: none;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: flex 0.6s cubic-bezier(0.25, 1, 0.5, 1), transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(11, 17, 32, 0.45) 0%, rgba(11, 17, 32, 0.78) 100%);
+  transition: background 0.5s ease;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #ffffff;
+  padding: 0 1.2rem;
+  transition: transform 0.5s ease;
+}
+
+.content h2 {
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  font-weight: 800;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.85);
+}
+
+.content p {
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: #f1f5f9;
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.channel-box:hover,
+.channel-box:focus-visible {
+  flex: 2.1;
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.65);
+  border-color: rgba(255, 255, 255, 0.45);
+  outline: none;
+}
+
+.channel-box:focus-visible {
+  box-shadow: 0 0 0 3px #38bdf8, 0 20px 40px rgba(0, 0, 0, 0.65);
+}
+
+.channel-box:hover .overlay,
+.channel-box:focus-visible .overlay {
+  background: linear-gradient(180deg, rgba(11, 17, 32, 0.15) 0%, rgba(11, 17, 32, 0.55) 100%);
+}
+
+.channel-box:hover .content,
+.channel-box:focus-visible .content {
+  transform: scale(1.04);
+}
+
+.channel-box:hover .content p,
+.channel-box:focus-visible .content p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.intro-footer {
+  width: 100%;
+  padding: 1.25rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: 16px;
+}
+
+.intro-footer-content {
+  width: 94vw;
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #cbd5e1;
+  font-size: 0.85rem;
+}
+
+.intro-footer-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.intro-footer-links a {
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.intro-footer-links a:hover,
+.intro-footer-links a:focus-visible {
+  color: #38bdf8;
+  text-decoration: underline;
+}
+
+@media (max-width: 820px) {
+  .landing-container {
+    flex-direction: column;
+    height: auto;
+    min-height: 84vh;
+  }
+  .channel-box {
+    min-height: 165px;
+  }
+  .channel-box .content p {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .channel-box:hover {
+    flex: 1.4;
+    transform: none;
+  }
+  .intro-footer-content {
+    flex-direction: column;
+    gap: 0.8rem;
+    text-align: center;
+  }
+}

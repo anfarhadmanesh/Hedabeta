@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa-IR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سید محمدرضا هدایتی دِرَو – وبلاگ شخصی و هاب نوشته‌ها</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <a href="#posts-section" class="skip-link">پرش به محتوای اصلی</a>
+
+  <!-- هدر شیشه‌ای مینیمال -->
+  <header class="site-header">
+    <div class="container header-container">
+      <div class="brand">
+        <a href="index.html" class="brand-title">Mohammadreza <span>Hedayati</span></a>
+        <span class="brand-subtitle">پزشک، سفیر دیابت و نویسنده | شرح حال زیستن</span>
+      </div>
+      <nav class="site-nav" aria-label="منوی اصلی">
+        <a href="intro.html" class="nav-link">درگاه چهارگانه</a>
+        <a href="index.html" class="nav-link active" aria-current="page">خانه (هاب وبلاگ)</a>
+        <a href="macteb.html" class="nav-link">مَکطِبّ</a>
+        <a href="midnight.html" class="nav-link">نیمه‌شب</a>
+        <a href="hedagraphy.html" class="nav-link">هِداگرافی</a>
+        <a href="Hedabeta.html" class="nav-link">داشبورد دیابت</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- بنر ورودی مینیمال و مدرن -->
+  <section class="blog-hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-kicker">PERSONAL WEBLOG &amp; NARRATIVE HUB</span>
+      <h1>شرحِ حالِ زیستن</h1>
+      <p>از سفیدیِ قند تا روپوشِ سفید | روایت‌هایی از بالین، ادبیات، تجربه زیسته و خودشناسی</p>
+      <div class="hero-actions">
+        <a href="#posts-section" class="hero-scroll-btn">مرور تازه‌ترین نوشته‌ها ↓</a>
+        <a href="post.html?id=1" class="hero-secondary-btn">مطالعه پیشگفتار</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- نوار هاب چهارگانه (اتصال سریع به ۴ جهان محتوایی بدون خروج از حس وبلاگ) -->
+  <section class="container hub-strip" aria-label="جهان‌های چهارگانه سایت">
+    <a href="macteb.html" class="hub-card">
+      <span class="hub-dot dot-olive"></span>
+      <div>
+        <strong>مَکطِبّ</strong>
+        <p>اخلاق پزشکی و روایت بالینی</p>
+      </div>
+      <span class="hub-arrow">←</span>
+    </a>
+
+    <a href="midnight.html" class="hub-card">
+      <span class="hub-dot dot-indigo"></span>
+      <div>
+        <strong>یادداشت‌های نیمه‌شب</strong>
+        <p>شعر، خلوت و نجواهای امید</p>
+      </div>
+      <span class="hub-arrow">←</span>
+    </a>
+
+    <a href="hedagraphy.html" class="hub-card">
+      <span class="hub-dot dot-dark"></span>
+      <div>
+        <strong>هِداگرافی</strong>
+        <p>توقف زمان در قاب تصویر</p>
+      </div>
+      <span class="hub-arrow">←</span>
+    </a>
+
+    <a href="Hedabeta.html" class="hub-card">
+      <span class="hub-dot dot-blue"></span>
+      <div>
+        <strong>HEDABETA &amp; YLD</strong>
+        <p>سفیر دیابت و مقالات انگلیسی</p>
+      </div>
+      <span class="hub-arrow">←</span>
+    </a>
+  </section>
+
+  <!-- چیدمان اصلی دوسطونی وبلاگ -->
+  <div class="container main-layout" id="posts-section">
+
+    <!-- ستون مطالب اصلی -->
+    <main class="content-area">
+
+      <!-- کارت خوش‌آمدگویی و پیشگفتار -->
+      <section class="intro-card" id="home">
+        <img src="img/Hedabeta1.jpg" alt="سید محمدرضا هدایتی دِرَو" class="profile-img" onerror="this.src='img/Hedabeta.jpg'">
+        <div class="intro-text">
+          <div class="intro-badge-row">
+            <span class="welcome-pill">تازه آمدید؟</span>
+          </div>
+          <h2>آغاز ماجرا؛ نوری بر زخم‌های تاریکِ آدم‌ها</h2>
+          <p>
+            اینجا خانه‌ی مرکزی تمام نوشته‌های من است؛ جایی که یادداشت‌های کشیک‌های بیمارستان، دل‌نوشته‌های نیمه‌شب، تجربه‌های زیستن با دیابت و معرفی کتاب‌ها در یک جریان واحد به هم می‌رسند.
+          </p>
+          <a href="post.html?id=1" class="highlight-link">مطالعه پیشگفتار و نقطه سرخط ←</a>
+        </div>
+      </section>
+
+      <!-- نوار فیلتر دسته‌بندی‌های وبلاگ -->
+      <div class="feed-toolbar">
+        <span class="feed-label">جریان یادداشت‌ها</span>
+        <div class="feed-filters">
+          <button class="filter-chip active" onclick="filterHomeFeed('all', this)">همه</button>
+          <button class="filter-chip" onclick="filterHomeFeed('مَکطِبّ', this)">مَکطِبّ و بالین</button>
+          <button class="filter-chip" onclick="filterHomeFeed('از نوشتن', this)">از نوشتن و نیمه‌شب</button>
+          <button class="filter-chip" onclick="filterHomeFeed('کتاب', this)">کتاب و روزمرگی</button>
+        </div>
+      </div>
+
+      <!-- جریان یادداشت‌ها (توسط js/index.js پر می‌شود) -->
+      <section class="posts-feed" aria-label="فهرست یادداشت‌ها">
+        <!-- محتوای پویا از index.js -->
+      </section>
+
+      <!-- صفحه‌بندی مینیمال -->
+      <nav class="pagination" aria-label="صفحه‌بندی یادداشت‌ها">
+        <span class="page-current" aria-current="page">برگه ۱</span>
+        <a href="#posts-section" class="page-link">برگه ۲</a>
+        <a href="#posts-section" class="page-link">بعدی »</a>
+      </nav>
+
+      <!-- بخش اشتراک خبرنامه -->
+      <section class="newsletter-card" id="contact">
+        <h3>همراهی با نوشته‌ها</h3>
+        <p>اگر مایلید یادداشت‌های تازه مستقیماً برای شما ارسال شود، نام و ایمیلتان را بنویسید:</p>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); alert('با تشکر، نشانی شما با موفقیت ثبت شد!');">
+          <input class="input-field" type="text" placeholder="نام شما" aria-label="نام شما" required>
+          <input class="input-field" type="email" placeholder="ایمیل شما" aria-label="ایمیل شما" required>
+          <button class="btn-submit" type="submit">ثبت نشانی</button>
+        </form>
+      </section>
+
+    </main>
+
+    <!-- ستون کناری (Sidebar) -->
+    <aside class="sidebar" aria-label="ستون کناری">
+
+      <div class="widget search-widget">
+        <label for="search-input" class="widget-title">جستجو در کل آرشیو</label>
+        <input type="search" id="search-input" placeholder="جستجوی عنوان، موضوع یا واژه..." class="search-input">
+      </div>
+
+      <div class="widget">
+        <h4 class="widget-title">یادداشت‌های اخیر</h4>
+        <ul class="widget-list">
+          <li><a href="post.html?id=1">اولِ نوشتن؛ در آغوش کشیدن نقص‌ها</a></li>
+          <li><a href="post.html?id=2">از این تخت ICU تا آن تخت ICU</a></li>
+          <li><a href="post.html?id=3">چند سکانس از کشیک جراحی</a></li>
+        </ul>
+      </div>
+
+      <div class="widget">
+        <h4 class="widget-title">دسته‌بندی موضوعی</h4>
+        <ul class="widget-list">
+          <li><a href="macteb.html">اخلاق و روایت پزشکی (مَکطِبّ) <span>(۴)</span></a></li>
+          <li><a href="midnight.html">دل‌نوشته‌های نیمه‌شب <span>(۳)</span></a></li>
+          <li><a href="Hedabeta.html">زیستن با دیابت و YLD <span>(۵)</span></a></li>
+          <li><a href="hedagraphy.html">عکاسی و طبیعت (هِداگرافی) <span>(۳)</span></a></li>
+        </ul>
+      </div>
+
+      <div class="widget">
+        <h4 class="widget-title">برچسب‌های پرکاربرد</h4>
+        <div class="tags-cloud">
+          <a href="#posts-section" class="tag-item">#کشیک_بیمارستان</a>
+          <a href="#posts-section" class="tag-item">#اخلاق_پزشکی</a>
+          <a href="#posts-section" class="tag-item">#دیابت</a>
+          <a href="#posts-section" class="tag-item">#خودشناسی</a>
+          <a href="#posts-section" class="tag-item">#اینترنی</a>
+          <a href="#posts-section" class="tag-item">#کتابخوانی</a>
+        </div>
+      </div>
+
+    </aside>
+
+  </div>
+
+  <!-- فوتر با آیکون‌های SVG -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© ۱۴۰۵ کلیه حقوق برای سید محمدرضا هدایتی دِرَو محفوظ است.</p>
+      <div class="footer-socials">
+        <a href="https://t.me/Macteb" target="_blank" rel="noopener noreferrer" title="تلگرام">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.19-.08-.05-.19-.02-.27 0-.11.03-1.92 1.23-5.44 3.6-.51.35-.98.52-1.39.51-.46-.01-1.35-.26-2.01-.48-.81-.27-1.46-.42-1.4-.88.03-.24.37-.48 1.03-.74 4.04-1.76 6.74-2.92 8.09-3.48 3.85-1.6 4.64-1.88 5.17-1.89.11 0 .37.03.54.17.14.12.18.28.2.43.01.07.02.16.02.26z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/drsmrhd/" target="_blank" rel="noopener noreferrer" title="لینکدین">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.16-3.8c-1.1 0-1.8.5-2.2 1.1v-1h-2.5v9h2.5v-4.9c0-1.2.3-2.4 1.7-2.4 1.4 0 1.4 1.4 1.4 2.5v4.9h2.5M6.5 8.1c.8 0 1.5-.7 1.5-1.5S7.3 5 6.5 5 5 5.7 5 6.5 5.7 8.1 6.5 8.1m-1.3 10.4h2.5v-9H5.2v9z"/></svg>
+        </a>
+        <a href="#" class="back-to-top">بازگشت به بالا ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/index.js"></script>
+  <script>
+    function filterHomeFeed(keyword, btn) {
+      document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+      btn.classList.add('active');
+      const searchInput = document.getElementById('search-input');
+      if (searchInput) {
+        searchInput.value = keyword === 'all' ? '' : keyword;
+        searchInput.dispatchEvent(new Event('input'));
+      }
+    }
+  </script>
+</body>
+</html>

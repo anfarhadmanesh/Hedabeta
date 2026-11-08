@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>هِداگرافی | که هر دوی‌شان زمان را متوقف می‌کنند</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Vazirmatn:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="hedagraphy.css">
+</head>
+<body>
+
+  <!-- بخش هرو تمام‌صفحه الهام‌گرفته از عکس مرجع -->
+  <section class="hg-hero">
+    <div class="hg-hero-bg"></div>
+    <div class="hg-hero-gradient"></div>
+
+    <!-- منوی بالای صفحه -->
+    <header class="hg-topbar">
+      <nav class="hg-nav-links">
+        <a href="#featured">کشف قاب‌ها</a>
+        <a href="#nature-story">روایت طبیعت</a>
+        <a href="#darkroom-grid">آرشیو تاریک‌خانه</a>
+        <a href="intro.html">درگاه چهارگانه</a>
+      </nav>
+      <div class="hg-top-tools">
+        <span class="hg-search-icon" title="جستجو">🔍</span>
+        <span class="hg-lang-switch">FA / EN ▾</span>
+      </div>
+    </header>
+
+    <!-- تیتر مرکزی سینمایی -->
+    <div class="hg-hero-center">
+      <h1 class="hg-display-title">
+        START YOUR VISUAL<br>JOURNEY HERE
+      </h1>
+      <p class="hg-display-subtitle">
+        که هر دوی‌شان زمان را متوقف می‌کنند: مرگ و عکس | روایت‌هایی در قاب تصویر
+      </p>
+    </div>
+
+    <!-- نوار فیلتر افقی شیشه‌ای پایین هرو (مشابه عکس مرجع) -->
+    <div class="hg-filter-strip">
+      <div class="hg-filter-item">مکان ثبت <span>|</span></div>
+      <div class="hg-filter-item">تاریخ و فصل <span>|</span></div>
+      <div class="hg-filter-item">طبیعت و کوهستان <span>|</span></div>
+      <div class="hg-filter-item">پرتره و بیمارستان <span>+</span></div>
+      <a href="#darkroom-grid" class="hg-search-btn">کاوش قاب‌ها</a>
+    </div>
+  </section>
+
+  <!-- بدنه تیره استودیویی با چیدمان ادیتوریال عکس مرجع -->
+  <main class="hg-main">
+
+    <!-- بخش اول: تصویر در یک سمت با قاب خطی سفید پشت آن + متن FEATURED در سمت مقابل -->
+    <section id="featured" class="hg-editorial-row">
+      
+      <!-- ستون تصویر با کادر هندسی آفست و دکمه‌های اسلایدر -->
+      <div class="hg-visual-col">
+        <div class="hg-framed-photo frame-top-left">
+          <img id="slider-img" src="img/lifehx.jpg" alt="کوهستان و تماشا" onerror="this.src='img/Hedagraphy.JPG'">
+        </div>
+        <!-- نقطه‌ها و دکمه‌های دایره‌ای اسلایدر مطابق عکس مرجع -->
+        <div class="hg-slider-controls">
+          <div class="hg-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+          <div class="hg-arrows">
+            <button class="circle-arrow" onclick="swapSlide('img/Hedagraphy.JPG')" aria-label="قبلی">‹</button>
+            <button class="circle-arrow active-arrow" onclick="swapSlide('img/lifehx.jpg')" aria-label="بعدی">›</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ستون متن داستان اول -->
+      <div class="hg-story-col">
+        <span class="hg-featured-box">FEATURED</span>
+        <h2 class="hg-editorial-heading">
+          کوهستان؛ مکانی برای<br>تماشا و مکاشفه
+        </h2>
+        <div class="hg-subtitle-line">
+          <h3>روایتی از سفرها، ارتفاع و سکوتِ طبیعت</h3>
+          <span class="line-decor"></span>
+        </div>
+        <p class="hg-story-text">
+          در باد روان شدم. چه شوری برای تماشا داشتم. وقتی از هیاهوی بخش‌ها و کشیک‌های بیمارستان فاصله می‌گیری و به دامنه کوهستان پناه می‌بری، دوربین تبدیل به چشمی می‌شود که لحظه‌های تکرارنشدنیِ زیستن را برای ابدیت منجمد می‌کند.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- بخش دوم: چیدمان معکوس (Back to Nature) -->
+    <section id="nature-story" class="hg-editorial-row reverse-row">
+      
+      <div class="hg-story-col align-left-text">
+        <h2 class="hg-editorial-heading">
+          بازگشت به طبیعت؛<br>غروب، مرگِ آفتاب نیست
+        </h2>
+        <div class="hg-subtitle-line">
+          <span class="line-decor"></span>
+          <h3>طبیعت آرامش می‌بخشد و معنا را به یاد می‌آورد</h3>
+        </div>
+        <p class="hg-story-text">
+          اگر یک روز طلوع و غروب آفتاب را نمی‌دیدم گناهکار بودم. هر قابِ غروب و طلوع ماه، یادآوریِ این حقیقت است که در پسِ هر تاریکی، نوری در انتظار دیده شدن است؛ کافی است دریچه‌ی لنز و نگاهمان را به روی جهان باز نگه داریم.
+        </p>
+        <a href="post.html?id=1" class="hg-white-btn">مطالعه روایتِ قاب</a>
+      </div>
+
+      <div class="hg-visual-col">
+        <div class="hg-framed-photo frame-bottom-right">
+          <img src="img/Hedagraphy.JPG" alt="غروب و ماه در هداگرافی">
+        </div>
+      </div>
+
+    </section>
+
+    <!-- بخش سوم: گالری تاریک‌خانه (با اطلاعات EXIF دوربین هنگام هاور) -->
+    <section id="darkroom-grid" class="hg-gallery-section">
+      <div class="hg-gallery-header">
+        <span class="hg-featured-box">DARKROOM ARCHIVE</span>
+        <h2>گزیده قاب‌های ثبت‌شده</h2>
+      </div>
+
+      <div class="hg-masonry-grid">
+        <figure class="hg-gallery-item">
+          <img src="img/Hedagraphy.JPG" alt="طلوع ماه در شفق">
+          <figcaption class="hg-exif-overlay">
+            <strong>طلوع ماه در شفق</strong>
+            <span>50mm &bull; f/2.0 &bull; ISO 200</span>
+          </figcaption>
+        </figure>
+
+        <figure class="hg-gallery-item">
+          <img src="img/lifehx.jpg" alt="مسیر کوهستان">
+          <figcaption class="hg-exif-overlay">
+            <strong>مسیر کوهستان و ابرها</strong>
+            <span>35mm &bull; f/5.6 &bull; ISO 100</span>
+          </figcaption>
+        </figure>
+
+        <figure class="hg-gallery-item">
+          <img src="img/midnight.JPG" alt="تاریکی و ارتفاع" onerror="this.src='img/Hedabeta1.jpg'">
+          <figcaption class="hg-exif-overlay">
+            <strong>سایه‌های نیمه‌شب</strong>
+            <span>28mm &bull; f/2.8 &bull; ISO 800</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- فوتر کادربندی‌شده دقیقاً مطابق پایین عکس مرجع -->
+  <footer class="hg-footer-wrapper">
+    <div class="hg-footer-box">
+      <div class="hg-footer-side">
+        <span>footage &amp; photos by @drsmrhd</span>
+      </div>
+
+      <a href="intro.html" class="hg-footer-pill">HEDAGRAPHY &bull; بازگشت به درگاه</a>
+
+      <div class="hg-footer-side hg-footer-socials">
+        <span>created by Mohammadreza Hedayati</span>
+        <a href="https://t.me/Macteb" target="_blank" rel="noopener noreferrer" title="تلگرام">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.19-.08-.05-.19-.02-.27 0-.11.03-1.92 1.23-5.44 3.6-.51.35-.98.52-1.39.51-.46-.01-1.35-.26-2.01-.48-.81-.27-1.46-.42-1.4-.88.03-.24.37-.48 1.03-.74 4.04-1.76 6.74-2.92 8.09-3.48 3.85-1.6 4.64-1.88 5.17-1.89.11 0 .37.03.54.17.14.12.18.28.2.43.01.07.02.16.02.26z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/drsmrhd/" target="_blank" rel="noopener noreferrer" title="لینکدین">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.16-3.8c-1.1 0-1.8.5-2.2 1.1v-1h-2.5v9h2.5v-4.9c0-1.2.3-2.4 1.7-2.4 1.4 0 1.4 1.4 1.4 2.5v4.9h2.5M6.5 8.1c.8 0 1.5-.7 1.5-1.5S7.3 5 6.5 5 5 5.7 5 6.5 5.7 8.1 6.5 8.1m-1.3 10.4h2.5v-9H5.2v9z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function swapSlide(imgSrc) {
+      const img = document.getElementById('slider-img');
+      img.style.opacity = '0.3';
+      setTimeout(() => {
+        img.src = imgSrc;
+        img.style.opacity = '1';
+      }, 200);
+    }
+  </script>
+</body>
+</html>

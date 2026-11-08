@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HEDABETA | سفیر دیابت، روایت بالینی و پروژه‌های YLD</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Vazirmatn:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="hedabeta.css">
+</head>
+<body>
+
+  <!-- هدر اصلی هدا بتا -->
+  <header class="hb-header">
+    <div class="hb-container hb-header-inner">
+      <div class="hb-brand">
+        <span class="diabetes-circle" title="نماد جهانی آگاهی از دیابت"></span>
+        <div>
+          <a href="Hedabeta.html" class="hb-logo">HEDA<span>BETA</span></a>
+          <p class="hb-tagline">از سفیدیِ قند تا روپوشِ سفید | سفیر و مدرس دیابت</p>
+        </div>
+      </div>
+
+      <nav class="hb-nav" aria-label="منوی هدا بتا">
+        <a href="intro.html" class="hb-nav-link">درگاه چهارگانه</a>
+        <a href="#posts-stream" class="hb-nav-link active">یادداشت‌ها و تجربه‌ها</a>
+        <a href="#yld-section" class="hb-nav-link">YLD &amp; International</a>
+        <a href="#journey-timeline" class="hb-nav-link">مسیر دیابتی من</a>
+        <a href="index.html" class="hb-nav-link">آرشیو کل سایت</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- بخش هرو و معرفی سفیر دیابت -->
+  <section class="hb-hero">
+    <div class="hb-container hb-hero-grid">
+      <div class="hb-hero-content">
+        <span class="hb-pill">💙 IDF Young Leaders in Diabetes (YLD) Advocate</span>
+        <h1>زیستن آگاهانه با دیابت؛ در تلاقی تجربه زیسته و دانش پزشکی</h1>
+        <p>
+          اینجا خانه‌ی نوشته‌های من از سال‌ها هم‌زیستی با دیابت نوع یک، مدیریت قند خون در کشیک‌های سنگین بیمارستان، آموزش به هم‌مسیران دیابتی و طراحی پروژه‌های بین‌المللی فدراسیون جهانی دیابت (YLD) است.
+        </p>
+        <div class="hb-hero-actions">
+          <a href="#posts-stream" class="btn-primary">مطالعه یادداشت‌ها ↓</a>
+          <a href="#yld-section" class="btn-outline">YLD English Hub →</a>
+        </div>
+      </div>
+
+      <div class="hb-hero-card">
+        <img src="img/Hedabeta1.jpg" alt="سید محمدرضا هدایتی - سفیر دیابت" class="hb-avatar-large" onerror="this.src='img/Hedabeta.jpg'">
+        <div class="hb-hero-card-info">
+          <h3>دکتر سید محمدرضا هدایتی دِرَو</h3>
+          <p>پزشک، سفیر و مدرس دیابت | عضو برنامه رهبران جوان دیابت</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- شمارنده‌های آماری داشبورد (Stats Counter) -->
+  <section class="hb-container hb-stats-section" aria-label="آمار فعالیت‌ها">
+    <div class="hb-stats-grid">
+      <div class="hb-stat-box">
+        <span class="stat-icon">🩸</span>
+        <strong class="stat-val">+۱۵ سال</strong>
+        <span class="stat-label">تجربه زیسته و مدیریت روزانه دیابت</span>
+      </div>
+      <div class="hb-stat-box amber-accent">
+        <span class="stat-icon">🌍</span>
+        <strong class="stat-val">YLD</strong>
+        <span class="stat-label">پروژه‌های بین‌المللی و آموزشی دیابت</span>
+      </div>
+      <div class="hb-stat-box">
+        <span class="stat-icon">🩺</span>
+        <strong class="stat-val">+۲۰ کارگاه</strong>
+        <span class="stat-label">آموزش خودمراقبتی و توانمندسازی بیماران</span>
+      </div>
+      <div class="hb-stat-box amber-accent">
+        <span class="stat-icon">✍️</span>
+        <strong class="stat-val">۲ زبان</strong>
+        <span class="stat-label">انتشار مستمر مقالات فارسی و انگلیسی</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- بخش اصلی: جریان پست‌ها + ستون کناری مسیر دیابت -->
+  <main class="hb-container hb-main-layout" id="posts-stream">
+
+    <!-- ستون راست: فیلتر و پست‌های وبلاگ -->
+    <div class="hb-feed-col">
+      
+      <!-- نوار فیلتر و جستجو -->
+      <div class="hb-filter-bar">
+        <div class="hb-tabs" role="tablist">
+          <button class="hb-tab active" onclick="filterHbPosts('all', this)">همه نوشته‌ها</button>
+          <button class="hb-tab" onclick="filterHbPosts('lived', this)">تجربه زیسته و کشیک‌ها</button>
+          <button class="hb-tab" onclick="filterHbPosts('edu', this)">آموزش علمی دیابت</button>
+          <button class="hb-tab" onclick="filterHbPosts('en', this)">English / YLD</button>
+        </div>
+        <input type="search" id="hb-search" placeholder="جستجو در مقالات هدا بتا..." class="hb-search-input" oninput="searchHbPosts(this.value)">
+      </div>
+
+      <!-- لیست مقالات هدا بتا -->
+      <div id="hb-posts-container" class="hb-posts-list">
+
+        <!-- پست ۱: تجربه زیسته -->
+        <article class="hb-post-card" data-cat="lived">
+          <div class="hb-post-img-wrap">
+            <img src="img/Hedabeta.jpg" alt="مدیریت قند خون در کشیک" class="hb-post-thumb">
+          </div>
+          <div class="hb-post-body">
+            <div class="hb-post-meta">
+              <span class="hb-badge badge-blue">تجربه زیسته و بالین</span>
+              <time>۱۴۰۵-۰۵-۱۱</time>
+            </div>
+            <h2><a href="post.html?id=1">از سفیدیِ قند تا روپوشِ سفید؛ مدیریت دیابت در کشیک‌های ۲۴ ساعته</a></h2>
+            <p>
+              چگونه می‌توان میان صدای آلارم سنسور قند خون و زنگ احیای اورژانس تعادل برقرار کرد؟ روایتی از چالش‌های واقعی یک پزشک دیابتی در بخش‌های جراحی و اطفال...
+            </p>
+            <div class="hb-post-footer">
+              <a href="post.html?id=1" class="hb-read-more">مطالعه کامل نوشتار ←</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- پست ۲: آموزش دیابت -->
+        <article class="hb-post-card" data-cat="edu">
+          <div class="hb-post-img-wrap">
+            <img src="img/Hedabeta1.jpg" alt="آموزش Time in Range" class="hb-post-thumb">
+          </div>
+          <div class="hb-post-body">
+            <div class="hb-post-meta">
+              <span class="hb-badge badge-amber">آموزش و خودمراقبتی</span>
+              <time>۱۴۰۵-۰۴-۲۰</time>
+            </div>
+            <h2><a href="post.html?id=1">فراتر از HbA1c؛ چرا شاخص Time in Range (زمان در محدوده هدف) سرنوشت‌ساز است؟</a></h2>
+            <p>
+              نگاهی کاربردی و ساده به پایش مداوم قند خون (CGM) و تکنیک‌هایی که به ما کمک می‌کنند نوسانات خسته‌کننده قند خون را به حداقل برسانیم.
+            </p>
+            <div class="hb-post-footer">
+              <a href="post.html?id=1" class="hb-read-more">مطالعه کامل نوشتار ←</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- پست ۳: انگلیسی / YLD -->
+        <article class="hb-post-card ltr-card" data-cat="en" dir="ltr">
+          <div class="hb-post-img-wrap">
+            <img src="img/lifehx.jpg" alt="YLD Project" class="hb-post-thumb">
+          </div>
+          <div class="hb-post-body">
+            <div class="hb-post-meta">
+              <span class="hb-badge badge-blue">YLD Advocacy &amp; Global Health</span>
+              <time>October 2026</time>
+            </div>
+            <h2><a href="post.html?id=1">Bridging the Gap: Peer-to-Peer Diabetes Education in Clinical Settings</a></h2>
+            <p>
+              How lived experience transforms patient education: insights from designing community-driven diabetes workshops and empowering young adults living with T1D.
+            </p>
+            <div class="hb-post-footer">
+              <a href="post.html?id=1" class="hb-read-more">Read Full Article →</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- بخش اختصاصی بین‌المللی پروژه‌های YLD (English Hub) -->
+      <section id="yld-section" class="yld-hub" dir="ltr">
+        <div class="yld-header">
+          <div>
+            <span class="yld-tag">INTERNATIONAL ADVOCACY</span>
+            <h2>YLD Projects &amp; Global Initiatives</h2>
+          </div>
+          <span class="yld-badge">English Portal</span>
+        </div>
+        <p class="yld-intro">
+          As a Medical Doctor and Diabetes Advocate, I design and lead initiatives focused on T1D education, stigma reduction, and accessible patient empowerment.
+        </p>
+
+        <div class="yld-cards-grid">
+          <div class="yld-project-card">
+            <span class="project-status">Active Project</span>
+            <h3>Peer Mentorship &amp; T1D Bootcamp</h3>
+            <p>Interactive workshops connecting newly diagnosed youth with experienced medical mentors living with diabetes.</p>
+            <a href="post.html?id=1" class="yld-link">Explore Project Roadmap →</a>
+          </div>
+
+          <div class="yld-project-card">
+            <span class="project-status">Clinical Guide</span>
+            <h3>Managing T1D on Hospital Night Shifts</h3>
+            <p>Practical evidence-based strategies for healthcare professionals and students balancing high-stress shifts with glycemic control.</p>
+            <a href="post.html?id=1" class="yld-link">Read Guidelines →</a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ستون چپ: سایدبار مسیر دیابت و دسترسی سریع -->
+    <aside class="hb-sidebar" id="journey-timeline">
+      
+      <!-- ویجت مسیر دیابتی من -->
+      <div class="hb-widget">
+        <h3 class="hb-widget-title">مسیر من در دنیای دیابت</h3>
+        <ul class="hb-journey-list">
+          <li>
+            <strong>تشخیص و آغاز مسیر</strong>
+            <p>آشنایی با انسولین و تبدیل چالش روزانه به انگیزه‌ای برای دانستن.</p>
+          </li>
+          <li>
+            <strong>ورود به دانشکده پزشکی</strong>
+            <p>پیوند تجربه زیسته بیمار بودن با دانش بالینی و فیزیولوژی.</p>
+          </li>
+          <li>
+            <strong>سفیر و مدرس دیابت</strong>
+            <p>برگزاری کارگاه‌های آموزشی و همراهی با کودکان و نوجوانان دیابتی.</p>
+          </li>
+          <li>
+            <strong>رهبران جوان دیابت (YLD)</strong>
+            <p>طراحی پروژه‌های آموزشی بین‌المللی و روایتگری به زبان انگلیسی.</p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ویجت پیوند به سایر کانال‌ها (جلوگیری از پراکندگی) -->
+      <div class="hb-widget">
+        <h3 class="hb-widget-title">پیوند با سایر محورهای من</h3>
+        <div class="hb-cross-links">
+          <a href="macteb.html">🌿 مَکطِبّ | اخلاق و روایت بالینی</a>
+          <a href="midnight.html">🌙 یادداشت‌های نیمه‌شب | شعر و تأمل</a>
+          <a href="hedagraphy.html">📷 هِداگرافی | گالری عکس</a>
+          <a href="index.html">📚 آرشیو جامع تمام نوشته‌ها</a>
+        </div>
+      </div>
+
+    </aside>
+
+  </main>
+
+  <!-- فوتر با آیکون‌های SVG -->
+  <footer class="hb-footer">
+    <div class="hb-container hb-footer-inner">
+      <p>© ۱۴۰۵ HEDABETA | دکتر سید محمدرضا هدایتی دِرَو – کلیه حقوق محفوظ است.</p>
+      <div class="hb-social-icons">
+        <a href="https://t.me/Macteb" target="_blank" rel="noopener noreferrer" title="تلگرام">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.07-.19-.08-.05-.19-.02-.27 0-.11.03-1.92 1.23-5.44 3.6-.51.35-.98.52-1.39.51-.46-.01-1.35-.26-2.01-.48-.81-.27-1.46-.42-1.4-.88.03-.24.37-.48 1.03-.74 4.04-1.76 6.74-2.92 8.09-3.48 3.85-1.6 4.64-1.88 5.17-1.89.11 0 .37.03.54.17.14.12.18.28.2.43.01.07.02.16.02.26z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/drsmrhd/" target="_blank" rel="noopener noreferrer" title="لینکدین">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.16-3.8c-1.1 0-1.8.5-2.2 1.1v-1h-2.5v9h2.5v-4.9c0-1.2.3-2.4 1.7-2.4 1.4 0 1.4 1.4 1.4 2.5v4.9h2.5M6.5 8.1c.8 0 1.5-.7 1.5-1.5S7.3 5 6.5 5 5 5.7 5 6.5 5.7 8.1 6.5 8.1m-1.3 10.4h2.5v-9H5.2v9z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function filterHbPosts(category, btn) {
+      document.querySelectorAll('.hb-tab').forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.hb-post-card').forEach(card => {
+        if (category === 'all' || card.dataset.cat === category) {
+          card.style.display = 'grid';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    function searchHbPosts(query) {
+      const q = query.trim().toLowerCase();
+      document.querySelectorAll('.hb-post-card').forEach(card => {
+        const text = card.innerText.toLowerCase();
+        card.style.display = text.includes(q) ? 'grid' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa-IR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>یادداشت - HEDABETA</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-container">
+      <div class="brand">
+        <a href="index.html" class="brand-title">Mohammadreza <span>Hedayati</span></a>
+      </div>
+      <nav class="site-nav">
+        <a href="index.html" class="nav-link">صفحه اصلی وبلاگ</a>
+        <a href="intro.html" class="nav-link">محورهای چهارگانه</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container main-layout">
+    <main class="content-area">
+      <!-- محتوای پست از طریق post.js پر می‌شود -->
+      <article id="single-post-container" class="post-card">
+        <p style="text-align: center; color: var(--text-muted);">در حال دریافت نوشتار...</p>
+      </article>
+
+      <!-- بخش نظرات و دیدگاه‌ها -->
+      <section class="comments-section">
+        <h3 class="comments-title">دیدگاه‌ها و گفتگو</h3>
+
+        <!-- فرم ثبت دیدگاه -->
+        <form class="comment-form" onsubmit="event.preventDefault(); submitComment();">
+          <div class="form-row">
+            <input type="text" id="comment-author" placeholder="نام یا نام‌مستعار شما" required class="input-field">
+            <input type="email" id="comment-email" placeholder="ایمیل شما (نمایش داده نمی‌شود)" required class="input-field">
+          </div>
+          <textarea id="comment-text" rows="4" placeholder="دیدگاه یا تجربه زیسته خود را بنویسید..." required class="input-field textarea-field"></textarea>
+          <button type="submit" class="btn-submit">ارسال دیدگاه</button>
+        </form>
+
+        <!-- فهرست دیدگاه‌های ثبت‌شده -->
+        <div id="comments-list" class="comments-list">
+          <div class="comment-item">
+            <div class="comment-header">
+              <span class="comment-author">علی</span>
+              <time class="comment-date">۱۴۰۵-۰۵-۱۲</time>
+            </div>
+            <p class="comment-body">روایت صادقانه‌ای بود؛ توصیف مواجهه با نقص‌ها دقیقاً حس شروع نوشتن را منتقل می‌کند.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- سایدبار -->
+    <aside class="sidebar">
+      <div class="widget">
+        <h4 class="widget-title">ارتباط و شبکه‌ها</h4>
+        <div class="social-links">
+          <a href="https://t.me/your_telegram" class="social-pill">تلگرام</a>
+          <a href="https://www.linkedin.com/in/drsmrhd/" class="social-pill">لینکدین</a>
+          <a href="mailto:contact@hedabeta.ir" class="social-pill">ایمیل</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>© ۱۴۰۵ کلیه حقوق برای سید محمدرضا هدایتی دِرَو محفوظ است.</p>
+      <a href="#" class="back-to-top">بازگشت به بالا ↑</a>
+    </div>
+  </footer>
+
+  <script src="js/post.js"></script>
+</body>
+</html>

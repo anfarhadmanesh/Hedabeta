@@ -1,0 +1,421 @@
+:root {
+  --mn-dark: #080B12;
+  --mn-surface: #111624;
+  --mn-white: #F8FAFC;
+  --mn-muted: #94A3B8;
+  --mn-accent: #C4B5FD;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-vazir: 'Vazirmatn', Tahoma, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--mn-dark);
+  color: var(--mn-white);
+  font-family: var(--font-vazir);
+  line-height: 2.05;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+/* --- بخش ورودی (Hero) با عکس midnight.JPG --- */
+.mn-hero {
+  position: relative;
+  height: 92vh;
+  min-height: 580px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 6%;
+}
+
+.mn-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('img/midnight.JPG'), url('img/midnight.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.68) contrast(1.08);
+  z-index: 0;
+}
+
+.mn-hero-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(8, 11, 18, 0.5) 0%,
+    rgba(15, 23, 42, 0.3) 45%,
+    rgba(8, 11, 18, 0.94) 88%,
+    #080B12 100%
+  );
+  z-index: 1;
+}
+
+/* منوی بالای صفحه */
+.mn-topbar {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.88rem;
+}
+
+.mn-nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.mn-nav-links a:hover {
+  color: var(--mn-accent);
+}
+
+.mn-ambient-top-btn,
+.mn-inline-audio {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.mn-ambient-top-btn.playing,
+.mn-inline-audio.playing {
+  background: rgba(196, 181, 253, 0.22);
+  border-color: var(--mn-accent);
+  color: var(--mn-accent);
+}
+
+/* تیتر مرکزی بنر */
+.mn-hero-center {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  margin: auto 0;
+}
+
+.mn-latin-kicker {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  letter-spacing: 0.28em;
+  color: var(--mn-accent);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.mn-display-title {
+  font-size: clamp(2.3rem, 5vw, 4rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin-bottom: 0.9rem;
+  text-shadow: 0 6px 24px rgba(0, 0, 0, 0.8);
+}
+
+.mn-display-subtitle {
+  font-size: 0.98rem;
+  color: rgba(248, 250, 252, 0.82);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* نوار فیلتر شیشه‌ای پایین هرو */
+.mn-filter-strip {
+  position: relative;
+  z-index: 3;
+  max-width: 860px;
+  width: 100%;
+  margin: 0 auto 0.5rem auto;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.6rem 0.8rem 0.6rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.mn-filter-btn {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.75);
+  font-family: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 0.3rem 0.6rem;
+  transition: color 0.2s;
+}
+
+.mn-filter-btn.active,
+.mn-filter-btn:hover {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.mn-filter-strip .sep {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.mn-Action-pill {
+  background: #ffffff;
+  color: #080B12;
+  font-weight: 700;
+  font-size: 0.82rem;
+  padding: 0.5rem 1.4rem;
+}
+
+/* --- بخش اصلی: فضای متن گسترده (75%) + عکس کوچک (25%) --- */
+.mn-main {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 4.5rem 1.5rem;
+}
+
+.mn-editorial-row {
+  display: grid;
+  /* ستون عکس کوچک (220px) و ستون متن بسیار جادار (1fr) */
+  grid-template-columns: 220px 1fr;
+  gap: 3.5rem;
+  align-items: start;
+  margin-bottom: 6.5rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.mn-editorial-row.reverse-row {
+  grid-template-columns: 1fr 220px;
+}
+
+/* قاب عکس کوچک با کادر خطی سفید آفست */
+.mn-visual-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mn-framed-thumb {
+  position: relative;
+  width: 200px;
+  height: 250px;
+}
+
+.mn-framed-thumb img {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.65);
+  filter: grayscale(15%) contrast(1.05);
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.mn-framed-thumb:hover img {
+  transform: scale(1.03);
+  filter: grayscale(0%);
+}
+
+.frame-top-left::before {
+  content: '';
+  position: absolute;
+  top: -14px;
+  left: -14px;
+  width: 80%;
+  height: 85%;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  z-index: 1;
+}
+
+.frame-bottom-right::before {
+  content: '';
+  position: absolute;
+  bottom: -14px;
+  right: -14px;
+  width: 80%;
+  height: 85%;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  z-index: 1;
+}
+
+.mn-thumb-caption {
+  margin-top: 1.25rem;
+  font-size: 0.75rem;
+  color: var(--mn-muted);
+  text-align: center;
+}
+
+/* ستون گسترده متن و اشعار */
+.mn-post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.mn-featured-box {
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  padding: 3px 14px;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  color: var(--mn-accent);
+}
+
+.mn-date-label {
+  font-size: 0.8rem;
+  color: var(--mn-muted);
+}
+
+.mn-editorial-heading {
+  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  font-weight: 500;
+  line-height: 1.45;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.mn-editorial-heading a:hover {
+  color: var(--mn-accent);
+}
+
+.mn-subtitle-line {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.mn-subtitle-line h3 {
+  font-size: 0.92rem;
+  font-weight: 400;
+  color: var(--mn-accent);
+}
+
+.line-decor {
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.28);
+  min-width: 50px;
+}
+
+/* باکس اختصاصی شعر در ستون متن */
+.mn-verse-box {
+  background: rgba(255, 255, 255, 0.03);
+  border-right: 2px solid var(--mn-accent);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+  font-weight: 300;
+  color: #F1F5F9;
+  line-height: 2.2;
+}
+
+.mn-verse-box footer {
+  margin-top: 0.6rem;
+  font-size: 0.82rem;
+  color: var(--mn-accent);
+}
+
+.mn-story-text {
+  font-size: 0.96rem;
+  color: #CBD5E1;
+  line-height: 2.15;
+  margin-bottom: 1.75rem;
+  text-align: justify;
+}
+
+.mn-white-btn {
+  display: inline-block;
+  background: #ffffff;
+  color: #080B12;
+  font-size: 0.84rem;
+  font-weight: 700;
+  padding: 0.55rem 1.5rem;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.mn-white-btn:hover {
+  background: var(--mn-accent);
+  color: #080B12;
+  transform: translateY(-2px);
+}
+
+/* --- فوتر کادربندی‌شده --- */
+.mn-footer-wrapper {
+  padding: 1rem 6% 3rem 6%;
+}
+
+.mn-footer-box {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.9rem 1.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: var(--mn-muted);
+}
+
+.mn-footer-pill {
+  background: #ffffff;
+  color: #080B12;
+  font-weight: 700;
+  font-size: 0.78rem;
+  padding: 0.45rem 1.5rem;
+  border-radius: 999px;
+}
+
+.mn-footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.mn-footer-socials a:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 820px) {
+  .mn-editorial-row,
+  .mn-editorial-row.reverse-row {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .mn-footer-box {
+    flex-direction: column;
+    text-align: center;
+  }
+}
